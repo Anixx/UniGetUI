@@ -21,6 +21,9 @@
         <Style Selector="Window">
             <Setter Property="Theme" Value="{StaticResource ClassicWindow}" />
         </Style>
+        <Style Selector="Window">
+            <Setter Property="TextOptions.TextRenderingMode" Value="SubpixelAntialias" />
+        </Style>
         <StyleInclude Source="avares://Classic.Avalonia.Theme.DataGrid/Classic.axaml"/>
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml"/>
         <StyleInclude Source="avares://UniGetUI/Assets/Styles/Styles.Common.axaml"/>
