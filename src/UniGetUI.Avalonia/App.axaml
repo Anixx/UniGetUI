@@ -21,8 +21,20 @@
         <Style Selector="Window">
             <Setter Property="Theme" Value="{StaticResource ClassicWindow}" />
         </Style>
+        <classic:ClassicTheme classic:ClassicTheme.FontAliasing="False" />
         <StyleInclude Source="avares://Classic.Avalonia.Theme.DataGrid/Classic.axaml"/>
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml"/>
         <StyleInclude Source="avares://UniGetUI/Assets/Styles/Styles.Common.axaml"/>
     </Application.Styles>
+
+    <Application.Resources>
+        <!-- Полный набор кистей-заглушек для предотвращения падений DataGrid -->
+        <SolidColorBrush x:Key="SystemControlTransparentBrush" Color="Transparent" />
+        <SolidColorBrush x:Key="SystemControlHighlightListLowBrush" Color="#12000000" />
+        <SolidColorBrush x:Key="SystemControlHighlightListMediumBrush" Color="#33000000" />
+        <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="Black" />
+        <SolidColorBrush x:Key="SystemControlBackgroundBaseLowBrush" Color="#11000000" />
+        <SolidColorBrush x:Key="SystemControlBackgroundAltHighBrush" Color="White" />
+    </Application.Resources>
+
 </Application>
