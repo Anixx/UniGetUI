@@ -92,10 +92,10 @@ jobs:
     permissions:
       contents: read
     env:
-      UNIGETUI_GITHUB_CLIENT_ID: ${{ secrets.UNIGETUI_GITHUB_CLIENT_ID }}
-      UNIGETUI_GITHUB_CLIENT_SECRET: ${{ secrets.UNIGETUI_GITHUB_CLIENT_SECRET }}
-      UNIGETUI_OPENSEARCH_USERNAME: ${{ secrets.UNIGETUI_OPENSEARCH_USERNAME }}
-      UNIGETUI_OPENSEARCH_PASSWORD: ${{ secrets.UNIGETUI_OPENSEARCH_PASSWORD }}
+UNIGETUI_GITHUB_CLIENT_ID: "dummy_id"
+      UNIGETUI_GITHUB_CLIENT_SECRET: "dummy_secret"
+      UNIGETUI_OPENSEARCH_USERNAME: "dummy_user"
+      UNIGETUI_OPENSEARCH_PASSWORD: "dummy_password"
       NUGET_PACKAGES: ${{ github.workspace }}\.nuget\packages
     strategy:
       fail-fast: false
