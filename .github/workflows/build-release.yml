@@ -92,7 +92,7 @@ jobs:
     permissions:
       contents: read
     env:
-UNIGETUI_GITHUB_CLIENT_ID: "dummy_id"
+      UNIGETUI_GITHUB_CLIENT_ID: "dummy_id"
       UNIGETUI_GITHUB_CLIENT_SECRET: "dummy_secret"
       UNIGETUI_OPENSEARCH_USERNAME: "dummy_user"
       UNIGETUI_OPENSEARCH_PASSWORD: "dummy_password"
