@@ -36,6 +36,8 @@
         <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="Black" />
         <SolidColorBrush x:Key="SystemControlBackgroundBaseLowBrush" Color="#11000000" />
         <SolidColorBrush x:Key="SystemControlBackgroundAltHighBrush" Color="White" />
+        <sys:Double x:Key="ControlContentThemeFontSize">12</sys:Double>
+        <FontFamily x:Key="ControlContentThemeFontFamily">Consolas, Courier New, monospace</FontFamily>
     </Application.Resources>
 
 </Application>
