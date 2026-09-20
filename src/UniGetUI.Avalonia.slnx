@@ -2,6 +2,7 @@
   <Configurations>
     <Platform Name="x64" />
     <Platform Name="arm64" />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </Configurations>
   <Folder Name="/UniGetUI.Avalonia/">
     <Project Path="UniGetUI.Avalonia/UniGetUI.Avalonia.csproj">
