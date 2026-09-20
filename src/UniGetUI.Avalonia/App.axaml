@@ -18,6 +18,7 @@
 
     <Application.Styles>
         <ClassicTheme />
+        <classic:ClassicTheme FontAliasing="False" />
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml"/>
         <StyleInclude Source="avares://UniGetUI/Assets/Styles/Styles.Common.axaml"/>
     </Application.Styles>
