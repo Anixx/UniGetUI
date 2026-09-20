@@ -19,6 +19,9 @@
     <Application.Styles>
         <ClassicTheme />
         <classic:ClassicTheme FontAliasing="False" />
+        <Style Selector="Window">
+            <Setter Property="Theme" Value="{StaticResource ClassicWindow}" />
+        </Style>
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml"/>
         <StyleInclude Source="avares://UniGetUI/Assets/Styles/Styles.Common.axaml"/>
     </Application.Styles>
