@@ -17,7 +17,7 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme />
+        <ClassicTheme />
         <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml"/>
         <StyleInclude Source="avares://UniGetUI/Assets/Styles/Styles.Common.axaml"/>
     </Application.Styles>
