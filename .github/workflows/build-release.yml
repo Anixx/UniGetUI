@@ -299,20 +299,6 @@ jobs:
           Write-Host "Artifact sizes saved to $SizesFile"
           Get-Content $SizesFile
 
-      - name: Code-sign installer
-        if: ${{ fromJSON(needs.preflight.outputs.dry-run) == false }}
-        shell: pwsh
-        run: |
-          $Platform = '${{ matrix.platform }}'
-          .\scripts\sign.ps1 `
-            -InstallerPath "output/UniGetUI.Installer.$Platform.exe" `
-            -AzureTenantId '${{ secrets.AZURE_TENANT_ID }}' `
-            -KeyVaultUrl '${{ secrets.CODE_SIGNING_KEYVAULT_URL }}' `
-            -ClientId '${{ secrets.CODE_SIGNING_CLIENT_ID }}' `
-            -ClientSecret '${{ secrets.CODE_SIGNING_CLIENT_SECRET }}' `
-            -CertificateName '${{ secrets.CODE_SIGNING_CERTIFICATE_NAME }}' `
-            -TimestampServer '${{ vars.CODE_SIGNING_TIMESTAMP_SERVER }}'
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
