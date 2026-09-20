@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="UniGetUI.Avalonia.App"
             xmlns:classic="clr-namespace:Classic.Avalonia.Theme;assembly=Classic.Avalonia.Theme"
+            xmlns:sys="using:System"
              xmlns:avaloniaApplication1="clr-namespace:UniGetUI.Avalonia"
              Name="UniGetUI"
              RequestedThemeVariant="Default">
