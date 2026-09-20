@@ -186,11 +186,11 @@
     </Target>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.3.0" />
-        <PackageReference Include="Avalonia.AvaloniaEdit" Version="11.3.0 />
-        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.0" />
-        <PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0" />
+        <PackageReference Include="Avalonia" Version="11.3.22" />
+        <PackageReference Include="Avalonia.AvaloniaEdit" Version="11.3.22" />
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.22" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.22" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.22" />
         <PackageReference Include="Devolutions.AvaloniaTheme.MacOS" Version="2026.3.13" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
         <PackageReference Include="Devolutions.AvaloniaTheme.Linux" Version="2026.3.11" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
         <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.0-beta3" Condition="'$(EnableAvaloniaDiagnostics)' == 'true'" />
