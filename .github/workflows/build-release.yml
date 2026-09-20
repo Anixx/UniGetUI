@@ -230,26 +230,6 @@ jobs:
             Write-Host ("Removed {0} oversized PDBs above {1:N2} MiB ({2:N2} MiB total)." -f $PdbsToRemove.Count, ($MaxShippedPdbSizeBytes / 1MB), ($RemovedPdbBytes / 1MB))
           }
 
-      - name: Code-sign binaries
-        if: ${{ fromJSON(needs.preflight.outputs.dry-run) == false }}
-        shell: pwsh
-        run: |
-          $ListPath = Join-Path $PWD "signing-files.txt"
-          $files = Get-ChildItem "unigetui_bin" -Recurse -Include "*.exe", "*.dll" | Where-Object {
-            (Get-AuthenticodeSignature $_.FullName).Status -eq "NotSigned"
-          }
-          $files.FullName | Set-Content $ListPath
-          Write-Host "Signing list contains $($files.Count) files."
-
-          .\scripts\sign.ps1 `
-            -FileListPath $ListPath `
-            -AzureTenantId '${{ secrets.AZURE_TENANT_ID }}' `
-            -KeyVaultUrl '${{ secrets.CODE_SIGNING_KEYVAULT_URL }}' `
-            -ClientId '${{ secrets.CODE_SIGNING_CLIENT_ID }}' `
-            -ClientSecret '${{ secrets.CODE_SIGNING_CLIENT_SECRET }}' `
-            -CertificateName '${{ secrets.CODE_SIGNING_CERTIFICATE_NAME }}' `
-            -TimestampServer '${{ vars.CODE_SIGNING_TIMESTAMP_SERVER }}'
-
       - name: Build installer
         shell: pwsh
         run: |
